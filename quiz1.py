@@ -20,3 +20,12 @@ else:
 
 # 3. Write a program that takes in two numbers 
 # and checks if the first number is greater than the second number.
+print('QUESTION 3')
+print('Enter number A:')
+a = input()
+print('Enter number B:')
+b = input()
+if int(a) > int(b):
+    print('Number A is greater than Number B.')
+else:
+    print('Number B is greater than Number A.')
