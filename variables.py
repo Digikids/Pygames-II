@@ -11,7 +11,7 @@ print(area,'meters squared')
 
 age = 9
 Age = 10
-print(age) # print is a python keyword
+print(age) #print is a python keyword
 print(Age)
 
 a = 10
