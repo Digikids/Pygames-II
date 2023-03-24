@@ -1,12 +1,12 @@
-import pygame
+import pygame  # imports the pygame library into the program. Is a must have line of code
 
-pygame.init()
+pygame.init()  # initializes the pygame library. Is a must have line of code
 
 # Set up the display
-screen_width = 800
-screen_height = 600
+screen_width = 800  # sets the width of the screen in pixels
+screen_height = 600  # sets the height of the screen in pixels
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("Hello, World!")
+pygame.display.set_caption("Simple Pygame Program")
 
 # Set up the font
 font = pygame.font.SysFont("Arial", 48)
@@ -18,8 +18,8 @@ text = font.render("Hello, World!", True, (255, 255, 255))
 text_width, text_height = font.size("Hello, World!")
 
 # Set the text position
-text_x = (screen_width - text_width) // 2
-text_y = (screen_height - text_height) // 2
+text_x = screen_width / 2
+text_y = screen_height / 2
 
 # Draw the text on the screen
 screen.blit(text, (text_x, text_y))
@@ -31,5 +31,4 @@ pygame.display.update()
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            pygame.quit()   
