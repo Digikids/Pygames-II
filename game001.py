@@ -1,5 +1,4 @@
 import pygame  # imports the pygame library into the program. Is a must have line of code
-
 pygame.init()  # initializes the pygame library. Is a must have line of code
 
 # Set up the display
