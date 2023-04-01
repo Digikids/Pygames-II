@@ -3,7 +3,7 @@ pygame.init()  # initializes the pygame library. Is a must have line of code
 
 # Set up the display
 screen_width = 800  # sets the width of the screen in pixels
-screen_height = 600  # sets the height of the screen in pixels
+screen_height = 700  # sets the height of the screen in pixels
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Simple Pygame Program")
 
@@ -11,18 +11,14 @@ pygame.display.set_caption("Simple Pygame Program")
 font = pygame.font.SysFont("Arial", 48)
 
 # Create the text
-text = font.render("Hello, World!", True, (255, 255, 255))
-
+text = font.render("Digikids", True, (0, 5, 105))
 # Get the text dimensions
-text_width, text_height = font.size("Hello, World!")
-
+text_width, text_height = font.size("Digikids")
 # Set the text position
 text_x = screen_width / 2
 text_y = screen_height / 2
-
 # Draw the text on the screen
-screen.blit(text, (text_x, text_y))
-
+screen.blit(text, (text_x, text_y)) # the blit function draws the text on the screen
 # Update the screen
 pygame.display.update()
 
