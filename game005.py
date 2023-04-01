@@ -25,6 +25,7 @@ def update_screen():
     screen.fill((0, 0, 0))
     draw_circle(circle_x, circle_y)
     pygame.display.update()
+
 update_screen()
 
 # Main game loop
@@ -36,11 +37,14 @@ while True:
         if event.type == pygame.KEYDOWN:
             # Move the circle in response to arrow key presses
             if event.key == pygame.K_LEFT:
-                circle_x -= move_step
+                if circle_x > 0 + circle_radius:
+                    circle_x -= move_step
             elif event.key == pygame.K_RIGHT:
-                circle_x += move_step
+                if circle_x < screen_width - circle_radius:
+                    circle_x += move_step
             elif event.key == pygame.K_UP:
-                circle_y -= move_step
+                if circle_y > 0 + circle_radius:
+                    circle_y -= move_step
             elif event.key == pygame.K_DOWN:
                 if circle_y < screen_height - circle_radius:
                     circle_y += move_step
