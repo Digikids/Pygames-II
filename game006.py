@@ -15,7 +15,6 @@ def random_color():
     blue = random.randint(0, 255)
     return (red, green, blue)
 
-
 # Set up the circle
 circle_radius = 50
 circle_color = random_color()
@@ -69,7 +68,7 @@ while True:
                     circle_y += move_step
                     score += 1
 
-             # Check if the circle has touched the left edge of the screen
+            # Check if the circle has touched the left edge of the screen
             if circle_x <= 0 + circle_radius:
                 score = 0
             # Check if the circle has touched the right edge of the screen
